@@ -1,0 +1,143 @@
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git checkout -b staging
+Switched to a new branch 'staging'
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git branch
+  main
+* staging
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git che
+ckout -b production
+Switched to a new branch 'production'
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git bra
+nch
+  main
+* production
+  staging
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git pus
+h origin production staging
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_gitlabflow_practice.git
+ * [new branch]      production -> production
+ * [new branch]      staging -> staging
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git che
+ckout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git sta
+tus
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git che
+ckout -b feature/payment
+Switched to a new branch 'feature/payment'
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git sta
+tus
+On branch feature/payment
+nothing to commit, working tree clean
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git add
+ payment
+fatal: pathspec 'payment' did not match any files
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git add payment.html
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git com
+mit -m "add payment.html file feature"
+[feature/payment d087394] add payment.html file feature
+ 1 file changed, 11 insertions(+)
+ create mode 100644 payment.html
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git pus
+h origin feature/payment
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 472.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature/payment' on GitHub by visiting:
+remote:      https://github.com/ChuVanHa167/git_workflow_gitlabflow_practice/pull/new/feature/payment
+remote:
+To https://github.com/ChuVanHa167/git_workflow_gitlabflow_practice.git
+ * [new branch]      feature/payment -> feature/payment      
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git bra
+nch
+* feature/payment
+  main
+  production
+  staging
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git che
+ckout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git mer
+ge feature/payment
+Updating 547307e..d087394
+Fast-forward
+ payment.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 payment.html
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git pus
+h origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_gitlabflow_practice.git
+   547307e..d087394  main -> main
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git che
+ckout staging 
+Switched to branch 'staging'
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git bra
+nch
+  feature/payment
+  main
+  production
+* staging
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git merge main
+Updating 547307e..d087394
+Fast-forward
+ payment.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 payment.html
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git pus
+h origin staging
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_gitlabflow_practice.git
+   547307e..d087394  staging -> staging
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git sta
+tus
+On branch staging
+nothing to commit, working tree clean
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git che
+ckout production
+Switched to branch 'production'
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git merge staging
+Updating 547307e..d087394
+Fast-forward
+ payment.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 payment.html
+
+C:\github-repo-clone\git_workflow_gitlabflow_practice>git pus
+h origin production
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ChuVanHa167/git_workflow_gitlabflow_practice.git
+   547307e..d087394  production -> production
