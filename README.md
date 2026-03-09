@@ -1,45 +1,49 @@
 # git_workflow_gitlabflow_practice
 
-Giả sử dự án
+_**Giả sử dự án:**_
+
 Một công ty phát triển ứng dụng web lớn và triển khai(deploy) theo nhiều môi trường:
-(phát triển)development
-(dàn dựng)staging
-(sản xuất)production
+
+development(phát triển)
+staging(dàn dựng)
+production(sản xuất)
+
 Nhóm quyết định sử dụng GitLab Flow.
 
-Các branch
+_**Các branch**_
 main → code mới nhất
 production → code đang chạy thật
 staging → môi trường test
 feature/* → tính năng
 
-Cấu trúc
+_**Cấu trúc**_
+```
 main
 ├─ feature/login
 ├─ feature/payment
-Sau khi hoàn thành:
+```
+_**Sau khi hoàn thành:**_
 feature → merge → main
-Sau đó deploy qua các môi trường:
+_**Sau đó deploy qua các môi trường:**_
 main → staging → production
 
-Workflow
+_**Workflow**_
 Developer làm việc trên feature branch.
 feature → main
-Sau đó deploy:
+_**Sau đó deploy:**_
 main → staging → production
 
-Ví dụ
+_**Ví dụ**_
+```
 main
 ↓
 staging
 ↓
 production
+```
 Nếu staging test OK → merge sang production.
 
-Mục đích repo
-Repo này minh họa:
-feature development
-
-môi trường staging
-
-deploy production
+_**Mục đích repo minh họa**_
+- feature development
+- môi trường staging
+- deploy production
